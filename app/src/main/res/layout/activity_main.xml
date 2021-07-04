@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/purple_500"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/logo"
+        android:layout_marginTop="50sp"
+        android:textAlignment="center"
+        android:textColor="@color/TextColor"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/user_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_below="@+id/logo"
+        android:backgroundTint="@color/teal_200"
+        android:layout_marginTop="100sp"
+        android:layout_marginHorizontal="50sp"
+        android:inputType="textPersonName"
+        android:textColor="@color/TextColor"
+        android:textColorHint="@color/TextColorHint"
+        android:hint="@string/hint_user_field" />
+    <Button
+        android:id="@+id/main_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/user_field"
+        android:layout_marginTop="20sp"
+        android:backgroundTint="@color/teal_200"
+        android:text="@string/main_btn"
+        android:layout_marginHorizontal="130sp"/>
+    <TextView
+        android:id="@+id/result_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat"
+        android:layout_below="@+id/main_btn"
+        android:layout_marginTop="50sp"
+        android:textAlignment="center"
+        android:textColor="@color/TextColorHint"
+        android:textSize="25sp" />
+</RelativeLayout>
