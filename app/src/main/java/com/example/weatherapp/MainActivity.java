@@ -1,5 +1,5 @@
 package com.example.weatherapp;
-
+//Автор johnny-kiv. Делаю приложение для узнавания погоды
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
