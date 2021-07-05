@@ -26,14 +26,15 @@ import java.net.URL;
 public class MainActivity extends AppCompatActivity {
     private EditText user_field;
     private Button main_btn;
-    private TextView result_info;
+    private TextView result_info1;
+    private TextView result_info2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         user_field = findViewById(R.id.user_field);
         main_btn = findViewById(R.id.main_btn);
-        result_info = findViewById(R.id.result_info);
+        result_info1 = findViewById(R.id.result_info1);
 
         main_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     private class GetUrlDate extends AsyncTask<String,String,String>{
         protected void onPreExecute(){
             super.onPreExecute();
-            result_info.setText("Ждите...");
+            result_info1.setText("Ждите...");
 
         }
         @Override
@@ -99,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(result);
             try {
                 JSONObject jsonObject = new JSONObject(result);
-                result_info.setText("Терпература: "+jsonObject.getJSONObject("main").getDouble("temp")+".\nСкорость ветра: "+jsonObject.getJSONObject("wind").getDouble("speed"));
+                result_info1.setText(jsonObject.getJSONObject("main").getDouble("temp")+"C");
 
             } catch (JSONException e) {
                 e.printStackTrace();

@@ -41,7 +41,7 @@
         android:text="@string/main_btn"
         android:layout_marginHorizontal="130sp"/>
     <TextView
-        android:id="@+id/result_info"
+        android:id="@+id/result_info1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserrat"
@@ -49,5 +49,5 @@
         android:layout_marginTop="50sp"
         android:textAlignment="center"
         android:textColor="@color/TextColorHint"
-        android:textSize="25sp" />
+        android:textSize="100sp" />
 </RelativeLayout>
