@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
             super.onPostExecute(result);
             try {
                 JSONObject jsonObject = new JSONObject(result);
-                result_info1.setText(jsonObject.getJSONObject("main").getDouble("temp")+"C");
+                result_info1.setText(Math.round(jsonObject.getJSONObject("main").getDouble("temp"))+"C");
 
             } catch (JSONException e) {
                 e.printStackTrace();
